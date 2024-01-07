@@ -41,7 +41,9 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [
-    'main'
+    'main',
+    'settings',
+    'blogs'
 ]
 
 MIDDLEWARE = [

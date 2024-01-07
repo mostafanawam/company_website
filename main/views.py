@@ -3,16 +3,18 @@ from django.shortcuts import render
 # Create your views here.
 
 def main_page(request):
-    context={
-        
-    }
-    return render(request, 'index.html',context=context)
+    context={}
+    return render(request, 'home.html',context=context)
 
 
-def blogs_page(request):
-    context={
-        
-    }
-    return render(request, 'blogs.html',context=context)
 
 
+def contact_page(request):
+    context={}
+    return render(request, 'contact.html',context=context)
+
+
+
+def about_page(request):
+    context={}
+    return render(request, 'about.html',context=context)

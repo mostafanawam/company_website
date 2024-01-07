@@ -11,9 +11,17 @@
 # General
 --------------------------------------------------------------*/
 
+:root {
+    --primary: #3ec1d5;
+}
+
 html,
 body {
     height: 100%;
+}
+
+.text-primary {
+    color: var(--primary)!important;
 }
 
 .floatleft {
@@ -65,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Raleway", sans-serif;
+    /* font-family: "Raleway", sans-serif; */
     margin: 0 0 15px;
     color: #444;
     font-weight: 500;
@@ -107,7 +115,7 @@ a {
 }
 
 a:hover {
-    color: #3EC1D5;
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -119,11 +127,15 @@ a:hover {
 body {
     background: #fff none repeat scroll 0 0;
     color: #444;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
     font-size: 14px;
     text-align: left;
     overflow-x: hidden;
     line-height: 22px;
+}
+
+.padding-main {
+    margin-top: 150px;
 }
 
 
@@ -138,7 +150,7 @@ body {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #3ec1d5;
+    background: var(--primary);
     width: 40px;
     height: 40px;
     transition: all 0.4s;
@@ -197,12 +209,12 @@ div#preloader {
 }
 
 ::-moz-selection {
-    background: #3EC1D5;
+    background: var(--primary);
     text-shadow: none;
 }
 
 ::selection {
-    background: #3EC1D5;
+    background: var(--primary);
     text-shadow: none;
 }
 
@@ -258,11 +270,11 @@ div#preloader {
     transition: all 0.5s;
     z-index: 997;
     transition: all 0.5s;
-    background: rgba(0, 0, 0, 0.5);
+    background: black;
 }
 
 #header.header-scrolled {
-    background: rgba(0, 0, 0, 0.8);
+    background: black;
     height: 64px;
 }
 
@@ -275,7 +287,7 @@ div#preloader {
 }
 
 #header .logo h1 span {
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 #header .logo h1 a,
@@ -301,28 +313,14 @@ div#preloader {
 }
 
 .header-bg {
-    background: url(../img/background/page-header.jpg);
+    /* background: url(../img/background/page-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
-    padding: 120px 0 60px;
+    background-position: top center; */
+    /* margin-top: 100px; */
 }
 
-.header-bg::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-@media (min-width: 1025px) {
-    .header-bg {
-        background-attachment: fixed;
-    }
-}
+@media (min-width: 1025px) {}
 
 
 /*--------------------------------------------------------------
@@ -374,7 +372,7 @@ div#preloader {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .navbar .dropdown ul {
@@ -410,7 +408,7 @@ div#preloader {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .navbar .dropdown:hover>ul {
@@ -505,7 +503,7 @@ div#preloader {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .navbar-mobile .getstarted,
@@ -540,7 +538,7 @@ div#preloader {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -701,12 +699,12 @@ div#preloader {
     transition: 0.5s;
     margin: 10px;
     color: #fff;
-    background: #3ec1d5;
+    background: var(--primary);
 }
 
 #hero .btn-get-started:hover {
     background: #fff;
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .btn-view-all {
@@ -719,13 +717,13 @@ div#preloader {
     transition: 0.5s;
     margin: 10px;
     color: #fff;
-    background: #3ec1d5;
+    background: var(--primary);
 }
 
 .btn-view-all:hover {
     background: transparent;
-    border: 1px solid #3ec1d5;
-    color: #3ec1d5;
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }
 
 
@@ -748,7 +746,7 @@ div#preloader {
 }
 
 .single-well ul li i {
-    color: #3EC1D5;
+    color: var(--primary);
     margin-right: 5px;
     font-size: 18px;
 }
@@ -781,7 +779,7 @@ div#preloader {
 
 .services-details:hover h4,
 .services-details:hover .services-icon {
-    color: #3EC1D5;
+    color: var(--primary);
 }
 
 .row.second-row {
@@ -886,7 +884,7 @@ div#preloader {
 }
 
 .email-news .email_button>button:hover {
-    background: #3EC1D5;
+    background: var(--primary);
     border: 1px solid #fff;
     color: #fff;
 }
@@ -896,7 +894,7 @@ div#preloader {
 }
 
 .team-left-icon ul li a:hover {
-    color: #3EC1D5;
+    color: var(--primary);
     background: #fff;
     border: 2px solid #fff;
 }
@@ -978,8 +976,8 @@ div#preloader {
 
 .team-social-icon ul li a:hover {
     color: #fff;
-    border: 1px solid #3EC1D5;
-    background: #3EC1D5;
+    border: 1px solid var(--primary);
+    background: var(--primary);
 }
 
 .team-content {
@@ -1026,7 +1024,7 @@ div#preloader {
 }
 
 .work-left-text {
-    background: #3EC1D5 none repeat scroll 0 0;
+    background: var(--primary) none repeat scroll 0 0;
 }
 
 .work-right-text {
@@ -1097,8 +1095,8 @@ div#preloader {
 
 #portfolio-flters li:hover,
 #portfolio-flters li.filter-active {
-    border-color: #3EC1D5;
-    background: #3EC1D5;
+    border-color: var(--primary);
+    background: var(--primary);
     color: #fff;
 }
 
@@ -1259,7 +1257,7 @@ div#preloader {
 }
 
 .pri_table_list li.check i {
-    color: #3EC1D5;
+    color: var(--primary);
     line-height: 0;
     font-size: 24px;
     margin-right: 5px;
@@ -1311,7 +1309,7 @@ div#preloader {
 }
 
 .saleon {
-    background: #3EC1D5 none repeat scroll 0 0;
+    background: var(--primary) none repeat scroll 0 0;
     color: #fff;
     font-size: 13px;
     font-weight: 700;
@@ -1340,8 +1338,8 @@ div#preloader {
 }
 
 .active>button {
-    background: #3EC1D5 none repeat scroll 0 0;
-    border: 1px solid #3EC1D5;
+    background: var(--primary) none repeat scroll 0 0;
+    border: 1px solid var(--primary);
     color: #fff;
     transition: 0.4s;
 }
@@ -1444,7 +1442,7 @@ div#preloader {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #3ec1d5;
+    background-color: var(--primary);
 }
 
 @media (min-width: 992px) {
@@ -1459,7 +1457,7 @@ div#preloader {
 --------------------------------------------------------------*/
 
 .suscribe-area {
-    background: #3EC1D5 none repeat scroll 0 0;
+    background: var(--primary) none repeat scroll 0 0;
     padding: 30px 0;
 }
 
@@ -1481,7 +1479,7 @@ div#preloader {
 .sus-btn {
     background: #fff none repeat scroll 0 0;
     border: 2px solid #fff;
-    color: #3EC1D5;
+    color: var(--primary);
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
@@ -1493,7 +1491,7 @@ div#preloader {
 }
 
 .sus-btn:hover {
-    background: #3EC1D5 none repeat scroll 0 0;
+    background: var(--primary) none repeat scroll 0 0;
     border: 2px solid #fff;
     color: #fff;
 }
@@ -1524,7 +1522,7 @@ div#preloader {
     line-height: 56px;
     border-radius: 50%;
     margin-bottom: 30px;
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .single-icon p {
@@ -1595,7 +1593,7 @@ div#preloader {
 
 .php-email-form input:focus,
 .php-email-form textarea:focus {
-    border-color: #3ec1d5;
+    border-color: var(--primary);
 }
 
 .php-email-form input {
@@ -1742,7 +1740,7 @@ div#preloader {
 }
 
 .single-blog .ready-btn:hover {
-    border: 1px solid #3EC1D5;
+    border: 1px solid var(--primary);
     color: #fff;
 }
 
@@ -1779,7 +1777,7 @@ div#preloader {
 }
 
 .search-option button:hover {
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .left-blog h4 {
@@ -1837,8 +1835,8 @@ div#preloader {
 
 .ready-btn:hover {
     color: #fff;
-    background: #3EC1D5;
-    border: 1px solid #3EC1D5;
+    background: var(--primary);
+    border: 1px solid var(--primary);
     text-decoration: none;
 }
 
@@ -1857,7 +1855,7 @@ div#preloader {
 
 .pst-content p a:hover,
 .left-blog ul li a:hover {
-    color: #3EC1D5;
+    color: var(--primary);
 }
 
 .blog-page .single-blog {
@@ -1929,7 +1927,7 @@ div#preloader {
 }
 
 .entry-meta span a:hover {
-    color: #3EC1D5;
+    color: var(--primary);
 }
 
 .post-information .entry-meta {
@@ -1951,7 +1949,7 @@ div#preloader {
 
 .entry-content blockquote {
     background: #fff none repeat scroll 0 0;
-    border-left: 5px solid #3EC1D5;
+    border-left: 5px solid var(--primary);
     font-size: 17.5px;
     font-style: italic;
     margin: 0 0 20px 40px;
@@ -1964,8 +1962,8 @@ div#preloader {
 .pagination>.active>span:hover,
 .pagination>.active>a:focus,
 .pagination>.active>span:focus {
-    background-color: #3EC1D5;
-    border-color: #3EC1D5;
+    background-color: var(--primary);
+    border-color: var(--primary);
     color: #fff;
     cursor: default;
     z-index: 3;
@@ -2005,8 +2003,8 @@ div#preloader {
 }
 
 .sharing-icon a:hover {
-    color: #3EC1D5;
-    border: 1px solid #3EC1D5;
+    color: var(--primary);
+    border: 1px solid var(--primary);
 }
 
 .single-blog .author-avatar {
@@ -2133,7 +2131,7 @@ span.email-notes {
 
 .comment-respond input[type=submit] {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 1px solid #3ec1d5;
+    border: 1px solid var(--primary);
     border-radius: 20px;
     box-shadow: none;
     color: #444;
@@ -2155,13 +2153,13 @@ span.email-notes {
 }
 
 .comments-content-wrap span a:hover {
-    color: #3EC1D5;
+    color: var(--primary);
 }
 
 .comment-respond input[type=submit]:hover {
-    border: 1px solid #3EC1D5;
+    border: 1px solid var(--primary);
     color: #fff;
-    background: #3EC1D5;
+    background: var(--primary);
 }
 
 .single-blog .blog-pagination {
@@ -2177,15 +2175,15 @@ span.email-notes {
 
 .footer-area {
     padding: 40px 0;
-    background: #f9f9f9;
+    background: black;
 }
 
 .footer-head p {
-    color: #444;
+    color: white;
 }
 
 .footer-head h4 {
-    color: #444;
+    color: white;
     font-size: 16px;
     letter-spacing: 2px;
     padding-bottom: 10px;
@@ -2197,7 +2195,7 @@ span.email-notes {
 }
 
 .footer-logo h2 {
-    color: #222;
+    color: white;
     padding: 0;
     margin: 0;
     font-size: 36px;
@@ -2206,7 +2204,7 @@ span.email-notes {
 }
 
 .footer-logo h2 span {
-    color: #3ec1d5;
+    color: var(--primary);
 }
 
 .footer-icons ul li {
@@ -2214,8 +2212,8 @@ span.email-notes {
 }
 
 .footer-icons ul li a {
-    border: 1px solid #444;
-    color: #444;
+    border: 1px solid white;
+    color: white;
     display: block;
     font-size: 16px;
     height: 40px;
@@ -2245,7 +2243,7 @@ span.email-notes {
 }
 
 .footer-contacts p span {
-    color: #3EC1D5;
+    color: var(--primary);
     font-weight: 700;
 }
 
@@ -2260,8 +2258,8 @@ span.email-notes {
 
 .popular-tag ul li a:hover,
 .footer-icons ul li a:hover {
-    background: #3EC1D5;
-    border: 1px solid #3EC1D5;
+    background: var(--primary);
+    border: 1px solid var(--primary);
     color: #fff;
 }
 
@@ -2281,27 +2279,27 @@ span.email-notes {
 }
 
 .footer-area-bottom {
-    background: #f1f1f1 none repeat scroll 0 0;
+    background: black none repeat scroll 0 0;
     padding: 15px 0;
 }
 
 .copyright-text a:hover {
     text-decoration: underline;
-    color: #3EC1D5;
+    color: var(--primary);
 }
 
 .copyright-text a {
-    color: #444;
+    color: white;
 }
 
 .copyright>p {
     margin-bottom: 0;
-    color: #444;
+    color: white;
 }
 
 .copyright a,
 .credits a {
-    color: #3EC1D5;
+    color: var(--primary);
 }
 
 .credits {
