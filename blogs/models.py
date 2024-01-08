@@ -31,7 +31,7 @@ class Post(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE,related_name="post_author")
     image = ResizedImageField(upload_to=uploadedform)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag,blank=True)
     created_at=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
