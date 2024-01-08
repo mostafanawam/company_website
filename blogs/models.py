@@ -5,7 +5,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django_resized import ResizedImageField
 
-
+# python manage.py dumpdata blogs.Tag --output blogs/fixtures/Tag.test.json
 class Tag(models.Model):
     name = models.CharField(max_length=50)
 
@@ -25,7 +25,7 @@ def uploadedform(object,filename):
     except Exception as e:
         print(f"error uploading gallery,{e}")
 
-
+# python manage.py dumpdata auth.User --output main/fixtures/users.static.json
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()

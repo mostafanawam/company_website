@@ -1,265 +1,269 @@
 
-{% extends 'layout.html' %}
+  {% extends 'layout.html' %}
 
-{% block title %} Blogs {% endblock %}
+  {% block title %} Blogs {% endblock %}
 
-{% block links %} 
+  {% block links %} 
 
-<li><a class="nav-link scrollto " href="{% url 'main:main_page' %}">Home</a></li>
-<li><a class="nav-link scrollto " href="{% url 'main:about_page' %}">About Us</a></li>
-<li><a class="nav-link scrollto" href="{% url 'main:contact_page' %}">Contact Us</a></li>
-<li><a class="nav-link scrollto active" href="{% url 'blogs:blogs_page' %}">Blogs</a></li>
+  <li><a class="nav-link scrollto " href="{% url 'main:main_page' %}">Home</a></li>
+  <li><a class="nav-link scrollto " href="{% url 'main:about_page' %}">About Us</a></li>
+  <li><a class="nav-link scrollto" href="{% url 'main:contact_page' %}">Contact Us</a></li>
+  <li><a class="nav-link scrollto active" href="{% url 'blogs:blogs_page' %}">Blogs</a></li>
 
-{% endblock %}
+  {% endblock %}
 
 
-{% block content %} 
+  {% block content %} 
 
-  
-  <main id="main">
+    
+    <main id="main">
 
-    <!-- ======= Blog Header ======= -->
-    <div class="header-bg page-area padding-main">
-      <div class="container position-relative">
-     
+      <!-- ======= Blog Header ======= -->
+      <div class="header-bg page-area padding-main">
+        <div class="container position-relative">
+      
 
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="section-headline text-center">
-              <h2>My Blogs</h2>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>My Blogs</h2>
+              </div>
             </div>
           </div>
+
+
+          
         </div>
+      </div><!-- End Blog Header -->
 
-
-        
-      </div>
-    </div><!-- End Blog Header -->
-
-    <!-- ======= Blog Page ======= -->
-    <div class="blog-page area-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-4">
-            <div class="page-head-blog">
-              <div class="single-blog-page">
-                <!-- search option start -->
-                <form action="#">
-                  <div class="search-option">
-                    <input type="text" placeholder="Search...">
-                    <button class="button" type="submit">
-                      <i class="bi bi-search"></i>
-                    </button>
+      <!-- ======= Blog Page ======= -->
+      <div class="blog-page area-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <div class="page-head-blog">
+                <div class="single-blog-page">
+                  <!-- search option start -->
+                  <form action="#">
+                    <div class="search-option">
+                      <input type="text" placeholder="Search...">
+                      <button class="button" type="submit">
+                        <i class="bi bi-search"></i>
+                      </button>
+                    </div>
+                  </form>
+                  <!-- search option end -->
+                </div>
+                <div class="single-blog-page">
+                  <!-- recent start -->
+                  <div class="left-blog">
+                    <h4>recent post</h4>
+                    <div class="recent-post">
+                      <!-- start single post -->
+                      <div class="recent-single-post">
+                        <div class="post-img">
+                          <a href="#">
+                            <img src="/assets/img/blog/1.jpg" alt="">
+                          </a>
+                        </div>
+                        <div class="pst-content">
+                          <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                        </div>
+                      </div>
+                      <!-- End single post -->
+                      <!-- start single post -->
+                      <div class="recent-single-post">
+                        <div class="post-img">
+                          <a href="#">
+                            <img src="/assets/img/blog/2.jpg" alt="">
+                          </a>
+                        </div>
+                        <div class="pst-content">
+                          <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                        </div>
+                      </div>
+                      <!-- End single post -->
+                      <!-- start single post -->
+                      <div class="recent-single-post">
+                        <div class="post-img">
+                          <a href="#">
+                            <img src="/assets/img/blog/3.jpg" alt="">
+                          </a>
+                        </div>
+                        <div class="pst-content">
+                          <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                        </div>
+                      </div>
+                      <!-- End single post -->
+                      <!-- start single post -->
+                      <div class="recent-single-post">
+                        <div class="post-img">
+                          <a href="#">
+                            <img src="/assets/img/blog/4.jpg" alt="">
+                          </a>
+                        </div>
+                        <div class="pst-content">
+                          <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                        </div>
+                      </div>
+                      <!-- End single post -->
+                    </div>
                   </div>
-                </form>
-                <!-- search option end -->
-              </div>
-              <div class="single-blog-page">
-                <!-- recent start -->
-                <div class="left-blog">
-                  <h4>recent post</h4>
-                  <div class="recent-post">
-                    <!-- start single post -->
-                    <div class="recent-single-post">
-                      <div class="post-img">
-                        <a href="#">
-                          <img src="/assets/img/blog/1.jpg" alt="">
-                        </a>
-                      </div>
-                      <div class="pst-content">
-                        <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                      </div>
-                    </div>
-                    <!-- End single post -->
-                    <!-- start single post -->
-                    <div class="recent-single-post">
-                      <div class="post-img">
-                        <a href="#">
-                          <img src="/assets/img/blog/2.jpg" alt="">
-                        </a>
-                      </div>
-                      <div class="pst-content">
-                        <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                      </div>
-                    </div>
-                    <!-- End single post -->
-                    <!-- start single post -->
-                    <div class="recent-single-post">
-                      <div class="post-img">
-                        <a href="#">
-                          <img src="/assets/img/blog/3.jpg" alt="">
-                        </a>
-                      </div>
-                      <div class="pst-content">
-                        <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                      </div>
-                    </div>
-                    <!-- End single post -->
-                    <!-- start single post -->
-                    <div class="recent-single-post">
-                      <div class="post-img">
-                        <a href="#">
-                          <img src="/assets/img/blog/4.jpg" alt="">
-                        </a>
-                      </div>
-                      <div class="pst-content">
-                        <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                      </div>
-                    </div>
-                    <!-- End single post -->
-                  </div>
+                  <!-- recent end -->
                 </div>
-                <!-- recent end -->
-              </div>
-              <div class="single-blog-page">
-                <div class="left-blog">
-                  <h4>categories</h4>
-                  <ul>
-                    <li>
-                      <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                      <a href="#">Project</a>
-                    </li>
-                    <li>
-                      <a href="#">Design</a>
-                    </li>
-                    <li>
-                      <a href="#">wordpress</a>
-                    </li>
-                    <li>
-                      <a href="#">Joomla</a>
-                    </li>
-                    <li>
-                      <a href="#">Html</a>
-                    </li>
-                    <li>
-                      <a href="#">Website</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              {% comment %} <div class="single-blog-page">
-                <div class="left-blog">
-                  <h4>archive</h4>
-                  <ul>
-                    <li>
-                      <a href="#">07 July 2016</a>
-                    </li>
-                    <li>
-                      <a href="#">29 June 2016</a>
-                    </li>
-                    <li>
-                      <a href="#">13 May 2016</a>
-                    </li>
-                    <li>
-                      <a href="#">20 March 2016</a>
-                    </li>
-                    <li>
-                      <a href="#">09 Fabruary 2016</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> {% endcomment %}
-              <div class="single-blog-page">
-                <div class="left-tags blog-tags">
-                  <div class="popular-tag left-side-tags left-blog">
-                    <h4>popular tags</h4>
+                <div class="single-blog-page">
+                  <div class="left-blog">
+                    <h4>categories</h4>
                     <ul>
-                      {% for tag in tags %}
-                        <li>
-                          <a href="#">{{tag.name}}</a>
-                        </li>
-                      {% endfor %}
-                 
+                      <li>
+                        <a href="#">Portfolio</a>
+                      </li>
+                      <li>
+                        <a href="#">Project</a>
+                      </li>
+                      <li>
+                        <a href="#">Design</a>
+                      </li>
+                      <li>
+                        <a href="#">wordpress</a>
+                      </li>
+                      <li>
+                        <a href="#">Joomla</a>
+                      </li>
+                      <li>
+                        <a href="#">Html</a>
+                      </li>
+                      <li>
+                        <a href="#">Website</a>
+                      </li>
                     </ul>
                   </div>
                 </div>
+                {% comment %} <div class="single-blog-page">
+                  <div class="left-blog">
+                    <h4>archive</h4>
+                    <ul>
+                      <li>
+                        <a href="#">07 July 2016</a>
+                      </li>
+                      <li>
+                        <a href="#">29 June 2016</a>
+                      </li>
+                      <li>
+                        <a href="#">13 May 2016</a>
+                      </li>
+                      <li>
+                        <a href="#">20 March 2016</a>
+                      </li>
+                      <li>
+                        <a href="#">09 Fabruary 2016</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div> {% endcomment %}
+                <div class="single-blog-page">
+                  <div class="left-tags blog-tags">
+                    <div class="popular-tag left-side-tags left-blog">
+                      <h4>popular tags</h4>
+                      <ul>
+                        {% for tag in tags %}
+                          <li>
+                            <a href="#">{{tag.name}}</a>
+                          </li>
+                        {% endfor %}
+                  
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- End left sidebar -->
-          <!-- Start single blog -->
-          <div class="col-md-8 col-sm-8 col-xs-12">
-            <div class="row">
+            <!-- End left sidebar -->
+            <!-- Start single blog -->
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <div class="row">
 
 
-              {% for post in  posts %}
+                {% for post in  posts %}
+                
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="single-blog">
+                    <div class="single-blog-img">
+
+                      {% if post.image  %}
+                          <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:30rem">
+                      {% endif %}  
+
+                    </div>
+                    <div class="blog-meta">
+                      <span class="comments-type">
+                        <i class="bi bi-chat"></i>
+                        <a >{{post.comments.count}} comments</a>
+                      </span>
+                      <span class="date-type">
+                        <i class="bi bi-calendar"></i>
+                        
+                        {{post.created_at}}
+                        {% comment %} 2016-03-05 / 09:10:16 {% endcomment %}
+                      </span>
+                    </div>
+                    <div class="blog-text">
+                      <h4>
+                        {{post.title}}
+                      </h4>
+                      <p>
+                        {{post.content}}
+                      </p>
+                    </div>
+                    <span>
+                      <a href="{% url 'blogs:blog_details' pk=post.id %}" class="ready-btn">Read more</a>
+                    </span>
+                  </div>
+                  </div>
               
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="single-blog">
-                  <div class="single-blog-img">
-
-                    {% if post.image  %}
-                        <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:30rem">
-                    {% endif %}  
-
-                  </div>
-                  <div class="blog-meta">
-                    <span class="comments-type">
-                      <i class="bi bi-chat"></i>
-                      <a >{{post.comments.count}} comments</a>
-                    </span>
-                    <span class="date-type">
-                      <i class="bi bi-calendar"></i>
-                      
-                      {{post.created_at}}
-                      {% comment %} 2016-03-05 / 09:10:16 {% endcomment %}
-                    </span>
-                  </div>
-                  <div class="blog-text">
-                    <h4>
-                      {{post.title}}
-                    </h4>
-                    <p>
-                      {{post.content}}
-                    </p>
-                  </div>
-                  <span>
-                    <a href="{% url 'blogs:blog_details' pk=post.id %}" class="ready-btn">Read more</a>
-                  </span>
                 </div>
-                </div>
-             
+                {% endfor %}
+
+                <div class="col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
+
+                {% if posts|length > 0 %}
+                <div class="blog-pagination">
+                  <ul class="pagination">
+                    <li class="page-item ">
+                      {% if posts.has_previous %}
+                        <a href="?page={{ posts.previous_page_number }} " style="font-size: 30px;" class="page-link text-primary"> &laquo;</a>
+                      {% else %}
+                        <span class="page-link" style="cursor: not-allowed;font-size: 30px;color:lightgray;">&laquo;</span>
+                      {% endif %}
+                    </li>
+            
+                    {% for page_num in posts.paginator.page_range %}
+                      <li class="page-item {% if posts.number == page_num %} active {% endif %}">
+                          <a href="?page={{ page_num }}" style="cursor: pointer;" class="page-link  {% if posts.number == page_num %} text-white {% else %}  {% endif %}">{{ page_num }}</a>
+                      </li>
+                    {% endfor %}
+    
+                    <li class="page-item">
+                      {% if posts.has_next %}
+                        <a href="?page={{ posts.next_page_number }}" style="font-size: 30px;"  class="page-link text-primary">&raquo;</a>
+                      {% else %}
+                        <span class="page-link " style="cursor: not-allowed;font-size: 30px;color:lightgray;">&raquo;</span>
+                      {% endif %}
+                    </li>
+                  </ul>
+                </div> 
+                {% endif %}
               </div>
-              {% endfor %}
 
-   
+            </div>
+        
+
+          </div> 
 
           </div>
-          
-          <div class="blog-pagination">
-            <ul class="pagination">
-              <li class="page-item ">
-                {% if posts.has_previous %}
-                  <a href="?page={{ posts.previous_page_number }} " style="font-size: 30px;" class="page-link text-primary"> &laquo;</a>
-                {% else %}
-                  <span class="page-link text-muted" style="cursor: not-allowed;font-size: 30px;">&laquo;</span>
-                {% endif %}
-              </li>
-      
-              {% for page_num in posts.paginator.page_range %}
-                <li class="page-item {% if posts.number == page_num %} active {% endif %}">
-                    <a href="?page={{ page_num }}" style="cursor: pointer;" class="page-link  {% if posts.number == page_num %} text-white {% else %}  {% endif %}">{{ page_num }}</a>
-                </li>
-              {% endfor %}
-
-              <li class="page-item">
-                {% if posts.has_next %}
-                  <a href="?page={{ posts.next_page_number }}" style="font-size: 30px;"  class="page-link text-primary">&raquo;</a>
-                {% else %}
-                  <span class="page-link text-muted" style="cursor: not-allowed;font-size: 30px;">&raquo;</span>
-                {% endif %}
-              </li>
-            </ul>
-          </div> 
-        </div> 
-
-
         </div>
-      </div>
-    </div><!-- End Blog Page -->
+      </div><!-- End Blog Page -->
 
-  </main><!-- End #main -->
+    </main><!-- End #main -->
 
-  {% endblock %}
+    {% endblock %}
