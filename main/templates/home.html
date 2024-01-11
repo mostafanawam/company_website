@@ -22,32 +22,32 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/1.jpg)">
+          <div class="carousel-item active" style="background-image: url(/assets/img/hero-carousel/design2.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">The Best Business Information </h2>
-                <p class="animate__animated animate__fadeInUp">We're In The Business Of Helping You Start Your Business</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <h2 class="animate__animated animate__fadeInDown">UI/UX Design</h2>
+                <p class="animate__animated animate__fadeInUp">Designing Tomorrow's Experiences</p>
+                <a href="#about" class="btn btn-main scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/2.jpg)">
+          <div class="carousel-item" style="background-image: url(/assets/img/hero-carousel/social.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">At vero eos et accusamus</h2>
-                <p class="animate__animated animate__fadeInUp">Helping Business Security & Peace of Mind for Your Family</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <h2 class="animate__animated animate__fadeInDown">Social Media Management</h2>
+                <p class="animate__animated animate__fadeInUp">Your Social Media Success Starts Here</p>
+                <a href="#about" class="btn btn-main scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/3.jpg)">
+          <div class="carousel-item" style="background-image: url(/assets/img/hero-carousel/telecome.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam</h2>
-                <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem</p>
-                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                <h2 class="animate__animated animate__fadeInDown">Seamless Telecom Solutions</h2>
+                <p class="animate__animated animate__fadeInUp">Your Gateway to Uninterrupted Connectivity</p>
+                <a href="#about" class="btn btn-main scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
@@ -69,51 +69,37 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <div id="about" class="about-area area-padding">
+    <div id="about" class="about-area area-padding-3">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline text-center">
-              <h2 class="">About Company Name</h2>
+              <h2>About Proventus</h2>
             </div>
           </div>
         </div>
         <div class="row ">
           <!-- single-well start-->
           <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="well-left">
-              <div class="single-well">
-                  <img src="/assets/img/about/1.jpg" alt="">
-              </div>
-            </div>
+            <img src="/assets/img/logo.png" alt="about_img"  class="w-100">
           </div>
           <!-- single-well end-->
-          <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="col-md-6 col-sm-6 col-xs-12 mt-md-4 mt-0">
             <div class="well-middle">
               <div class="single-well">
-                <a href="#">
+                {% comment %} <a href="#">
                   <h4 class="sec-head">project Maintenance</h4>
-                </a>
+                </a> {% endcomment %}
                 <p>
-                  Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+                  {% if company.about %}
+                    {{company.about}}
+                  {% else %}
+                    {% lorem 2 %}
+                  {% endif %}
                 </p>
-                <ul>
-                  <li>
-                    <i class="bi bi-check"></i> Interior design Package
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i> Building House
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i> Reparing of Residentail Roof
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i> Renovaion of Commercial Office
-                  </li>
-                  <li>
-                    <i class="bi bi-check"></i> Make Quality Products
-                  </li>
-                </ul>
+              </div>
+              <div class="text-center text-md-start">
+                <a class="btn btn-main-outline" href="{% url 'main:about_page' %}">Read More</a>
               </div>
             </div>
           </div>
@@ -128,7 +114,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline services-head text-center">
-              <h2>Our Services</h2>
+              <h2 >Our Services</h2>
             </div>
           </div>
         </div>
@@ -139,11 +125,11 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon">
-                    <i class="bi bi-briefcase"></i>
+                    <img src="/assets/services/digital.png" class="img-fluid" style="width:3rem"/>
                   </a>
-                  <h4>Expert Coder</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                  <h4 class="text-primary">Digital Solutions</h4>
+                  <p >  
+                     We offer a diverse range of innovative services designed to elevate your digital presence and drive success in the ever-evolving digital landscape. 
                   </p>
                 </div>
               </div>
@@ -155,12 +141,12 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" >
-                    <i class="bi bi-card-checklist"></i>
+                    {% comment %} <i class="bi bi-card-checklist"></i> {% endcomment %}
+                    <img src="/assets/services/ux-design.png" class="img-fluid" style="width:3rem"/>
                   </a>
-                  <h4>Creative Designer</h4>
+                  <h4 class="text-primary">UI/UX</h4>
                   <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
+                    Our design solutions seamlessly blend aesthetics and functionality, ensuring a captivating and intuitive digital journey for your audience.                  </p>
                 </div>
               </div>
               <!-- end about-details -->
@@ -172,12 +158,11 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" >
-                    <i class="bi bi-bar-chart"></i>
+                    <img src="/assets/services/social-media.png" class="img-fluid" style="width:3rem"/>
                   </a>
-                  <h4>Wordpress Developer</h4>
+                  <h4 class="text-primary">Social Media Management </h4>
                   <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
+                    From strategic content creation to engagement analytics, we'll help you build a compelling brand narrative and foster meaningful connections in the digital realm.                  </p>
                 </div>
               </div>
               <!-- end about-details -->
@@ -189,11 +174,11 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon" >
-                    <i class="bi bi-binoculars"></i>
+                    <img src="/assets/services/web-design.png" class="img-fluid" style="width:3rem"/>
                   </a>
-                  <h4>Social Marketer </h4>
+                  <h4 class="text-primary">Design</h4>
                   <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                    From captivating visuals to intuitive interfaces, we craft engaging designs that resonate with your audience and leave a lasting impression.
                   </p>
                 </div>
               </div>
@@ -207,11 +192,11 @@
               <div class="services-details">
                 <div class="single-services">
                   <a class="services-icon">
-                    <i class="bi bi-brightness-high"></i>
+                    <img src="/assets/services/telecome.png" class="img-fluid" style="width:3rem"/>
                   </a>
-                  <h4>Seo Expart</h4>
+                  <h4 class="text-primary">Telecom Services</h4>
                   <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                    We provide a robust suite of services, from network optimization to advanced communication solutions, ensuring that your connectivity needs are met with reliability and innovation.
                   </p>
                 </div>
               </div>
@@ -219,23 +204,7 @@
             </div>
           </div>
           <!-- End Left services -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <!-- end col-md-4 -->
-            <div class=" about-move">
-              <div class="services-details">
-                <div class="single-services">
-                  <a class="services-icon">
-                    <i class="bi bi-calendar4-week"></i>
-                  </a>
-                  <h4>24/7 Support</h4>
-                  <p>
-                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
-                  </p>
-                </div>
-              </div>
-              <!-- end about-details -->
-            </div>
-          </div>
+
         </div>
       </div>
     </div><!-- End Services Section -->
@@ -243,16 +212,13 @@
 
 
     <!-- ======= Rviews Section ======= -->
-    <div class="reviews-area">
+    <div class="reviews-area" style="background: url(/assets/img/contact/contact.jpg);">
       <div class="row g-0">
-        <div class="col-lg-6">
-          <img src="/assets/img/about/2.jpg" alt="" class="img-fluid">
-        </div>
-        <div class="col-lg-6 work-right-text d-flex align-items-center">
+        <div class="col-lg-12 work-right-text  text-center">
           <div class="px-5 py-5 py-lg-0">
             <h2>working with us</h2>
-            <h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5>
-            <a href="{% url 'main:contact_page' %}" class="ready-btn scrollto">Contact us</a>
+            <h5>Design, UI/UX, Social Media, and Telecome Solutions.</h5>
+            <a href="{% url 'main:contact_page' %}" class="btn btn-main scrollto">Contact us</a>
           </div>
         </div>
       </div>
@@ -396,122 +362,68 @@
           </div>
           <div class="row">
             <!-- Start Left Blog -->
+            {% for post in posts %}
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="single-blog">
                 <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="/assets/img/blog/1.jpg" alt="">
+                  <a href="{% url 'blogs:blog_details' pk=post.id %}">
+                      {% if post.image  %}
+                          <img src="{{post.image.url}}" alt="post_{{post.title}}" class="blog-img">
+                      {% endif %}  
                   </a>
                 </div>
                 <div class="blog-meta">
                   <span class="comments-type">
                     <i class="fa fa-comment-o"></i>
-                    <a href="#">13 comments</a>
+                    <a href="#">{{post.comments.count}} comments</a>
                   </span>
                   <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
+                    <i class="fa fa-calendar"></i>{{post.created_at}} 
                   </span>
                 </div>
                 <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Assumenda repud eum veniam</a>
+                  <h4 >
+                    <a href="{% url 'blogs:blog_details' pk=post.id %}" class="text-primary">{{post.title}}</a>
                   </h4>
                   <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                    {% comment %} {{post.content}} {% endcomment %}
+
+                    {{ post.content|slice:":150" }}{% if post.content|length > 150 %}...{% endif %}
+
                   </p>
                 </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
+                {% comment %} <span>
+                  <a href="blog.html" class="btn btn-main-outline">Read more</a>
+                </span> {% endcomment %}
               </div>
               <!-- Start single blog -->
             </div>
             <!-- End Left Blog-->
-            <!-- Start Left Blog -->
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="single-blog">
-                <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="/assets/img/blog/2.jpg" alt="">
-                  </a>
-                </div>
-                <div class="blog-meta">
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    <a href="#">130 comments</a>
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                  </span>
-                </div>
-                <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Explicabo magnam quibusdam.</a>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                  </p>
-                </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
-              </div>
-              <!-- Start single blog -->
-            </div>
-            <!-- End Left Blog-->
-            <!-- Start Right Blog-->
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="single-blog">
-                <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="/assets/img/blog/3.jpg" alt="">
-                  </a>
-                </div>
-                <div class="blog-meta">
-                  <span class="comments-type">
-                    <i class="fa fa-comment-o"></i>
-                    <a href="#">10 comments</a>
-                  </span>
-                  <span class="date-type">
-                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                  </span>
-                </div>
-                <div class="blog-text">
-                  <h4>
-                    <a href="blog.html">Lorem ipsum dolor sit amet</a>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
-                  </p>
-                </div>
-                <span>
-                  <a href="blog.html" class="ready-btn">Read more</a>
-                </span>
-              </div>
-            </div>
-            <!-- End Right Blog-->
+            {% endfor %}
+        
           </div>
         </div>
-        <div class="text-center">
-            <a  class="btn-view-all" href="{% url 'blogs:blogs_page' %}">view all</a>
+        <div class="text-center p-3">
+            <a  class="btn btn-main-outline" href="{% url 'blogs:blogs_page' %}">View All</a>
         </div>
       </div>
 
     </div><!-- End Blog Section -->
 
     <!-- ======= Suscribe Section ======= -->
-    <div class="suscribe-area">
+    {% comment %} <div class="suscribe-area">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
             <div class="suscribe-text text-center">
-              <h3>Welcome to our Company Name company</h3>
-              <a class="sus-btn" href="#">Get A quote</a>
+              <h3>Welcome to our Company</h3>
+              <a class="btn btn-white ms-4 p-2" href="#">Get A quote</a>
             </div>
           </div>
         </div>
       </div>
-    </div><!-- End Suscribe Section -->
+    </div> {% endcomment %}
+    <!-- End Suscribe Section -->
 
    
 

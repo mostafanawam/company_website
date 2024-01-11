@@ -1,0 +1,37 @@
+[{
+        "model": "main.sociallinks",
+        "pk": 1,
+        "fields": {
+            "name": "facebook",
+            "icon": "bi bi-facebook",
+            "url": "https://www.facebook.com/"
+        }
+    },
+    {
+        "model": "main.sociallinks",
+        "pk": 2,
+        "fields": {
+            "name": "twitter",
+            "icon": "bi bi-twitter",
+            "url": "https://twitter.com/"
+        }
+    },
+    {
+        "model": "main.sociallinks",
+        "pk": 3,
+        "fields": {
+            "name": "instagram",
+            "icon": "bi bi-instagram",
+            "url": "https://www.instagram.com/"
+        }
+    },
+    {
+        "model": "main.sociallinks",
+        "pk": 4,
+        "fields": {
+            "name": "linkedin",
+            "icon": "bi bi-linkedin",
+            "url": "https://www.linkedin.com/"
+        }
+    }
+]

@@ -1,0 +1,10 @@
+[{
+    "model": "main.company",
+    "pk": 1,
+    "fields": {
+        "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Beatae nostrum sapiente reprehenderit fuga ratione, unde soluta consequatur nisi architecto. Dicta optio neque dolorem explicabo suscipit ab quasi maiores illo doloremque sapiente, iusto amet animi sit corrupti assumenda quia modi fugit dolore eos, officiis rem aut quae animi velit dolorum beatae repudiandae modi nihil cumque, voluptatum consectetur provident placeat aliquam, porro at voluptatum sed.",
+        "email": "admin@gmail.com",
+        "phone": "+1 5589 55488 55",
+        "address": "Business and Innovation Centre\r\nHoward Street, HA7 1BT\r\nLondon, UK"
+    }
+}]

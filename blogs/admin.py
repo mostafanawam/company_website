@@ -17,7 +17,7 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = (
         "id",
         "post",
-        "author",
+        "commenter",
         'created_at'
     )
 admin.site.register(Comment,CommentAdmin)
@@ -30,4 +30,15 @@ class TagAdmin(admin.ModelAdmin):
         "name",
     )
 admin.site.register(Tag,TagAdmin)
+
+
+
+class CommenterAdmin(admin.ModelAdmin):  
+    list_display = (
+        "id",
+        "user",
+        "name",
+        "email"
+    )
+admin.site.register(Commenter,CommenterAdmin)
 

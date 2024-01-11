@@ -21,8 +21,6 @@
       <!-- ======= Blog Header ======= -->
       <div class="header-bg page-area padding-main">
         <div class="container position-relative">
-      
-
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="section-headline text-center">
@@ -30,9 +28,6 @@
               </div>
             </div>
           </div>
-
-
-          
         </div>
       </div><!-- End Blog Header -->
 
@@ -189,10 +184,12 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="single-blog">
                     <div class="single-blog-img">
+                      <a href="{% url 'blogs:blog_details' pk=post.id %}">
 
                       {% if post.image  %}
-                          <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:30rem">
+                          <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:30rem;">
                       {% endif %}  
+                    </a>
 
                     </div>
                     <div class="blog-meta">
@@ -202,22 +199,24 @@
                       </span>
                       <span class="date-type">
                         <i class="bi bi-calendar"></i>
-                        
                         {{post.created_at}}
-                        {% comment %} 2016-03-05 / 09:10:16 {% endcomment %}
                       </span>
                     </div>
                     <div class="blog-text">
-                      <h4>
-                        {{post.title}}
-                      </h4>
+                        <h4 >
+                          <a href="{% url 'blogs:blog_details' pk=post.id %}" class="text-primary">
+
+                          {{post.title}}
+                        </a>
+
+                        </h4>
                       <p>
                         {{post.content}}
                       </p>
                     </div>
-                    <span>
-                      <a href="{% url 'blogs:blog_details' pk=post.id %}" class="ready-btn">Read more</a>
-                    </span>
+                    {% comment %} <span>
+                      <a   class="btn btn-main-outline">Read more</a>
+                    </span> {% endcomment %}
                   </div>
                   </div>
               

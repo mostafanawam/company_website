@@ -33,8 +33,8 @@
             <div class="single-icon">
               <i class="bi bi-phone"></i>
               <p>
-                Call: +1 5589 55488 55<br>
-                <span>Monday-Friday (9am-5pm)</span>
+                {{company.phone}}<br>
+                {% comment %} <span>Monday-Friday (9am-5pm)</span> {% endcomment %}
               </p>
             </div>
           </div>
@@ -44,8 +44,8 @@
             <div class="single-icon">
               <i class="bi bi-envelope"></i>
               <p>
-                Email: info@example.com<br>
-                <span>Web: www.example.com</span>
+               {{company.email}}<br>
+                {% comment %} <span>Web: www.example.com</span> {% endcomment %}
               </p>
             </div>
           </div>
@@ -55,8 +55,11 @@
             <div class="single-icon">
               <i class="bi bi-geo-alt"></i>
               <p>
-                Location: A108 Adam Street<br>
-                <span>NY 535022, USA</span>
+                {% for add in address %}
+                  {{add}}<br>
+                {% endfor %}
+                {% comment %} Location: A108 Adam Street<br>
+                <span>NY 535022, USA</span> {% endcomment %}
               </p>
             </div>
           </div>
@@ -66,7 +69,15 @@
         <!-- Start  contact -->
         <div class="col-md-10 col-12">
           <div class="form contact-form">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="{% url 'main:contact_page' %}" method="post" role="form" >
+              {% csrf_token %}
+              
+                {% if notify.message %}
+                <div class="alert alert-{{notify.class}} text-{{notify.class}} text-center"> 
+                    {{notify.message}}
+                </div>
+                {% endif %}
+             
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
               </div>
@@ -79,12 +90,9 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="text-center p-4">
+                <button type="submit" class="btn btn-main-outline">Send Message</button>
               </div>
-              <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
             </form>
           </div>
         </div>

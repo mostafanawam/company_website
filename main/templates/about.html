@@ -7,7 +7,7 @@
 
 {% block links %} 
 
-<li><a class="nav-link scrollto " href="{% url 'main:main_page' %}">Home</a></li>
+<li><a class="nav-link scrollto  " href="{% url 'main:main_page' %}">Home</a></li>
 <li><a class="nav-link scrollto active" href="{% url 'main:about_page' %}">About Us</a></li>
 <li><a class="nav-link scrollto" href="{% url 'main:contact_page' %}">Contact Us</a></li>
 <li><a class="nav-link scrollto" href="{% url 'blogs:blogs_page' %}">Blogs</a></li>
@@ -22,51 +22,35 @@
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
-            <h2 class="">About Company Name</h2>
+            <h2 class="">About Proventus</h2>
           </div>
         </div>
       </div>
       <div class="row ">
         <!-- single-well start-->
         <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="well-left">
-            <div class="single-well">
-                <img src="/assets/img/about/1.jpg" alt="">
-            </div>
-          </div>
+          <img src="/assets/img/logo.png" alt="about_img"  class="w-100">
         </div>
         <!-- single-well end-->
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 mt-md-5 mt-0">
           <div class="well-middle">
             <div class="single-well">
-              <a href="#">
-                <h4 class="sec-head">project Maintenance</h4>
-              </a>
               <p>
-                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+                {% if company.about %}
+                  {{company.about}}
+                {% else %}
+                  {% lorem 2 %}
+                {% endif %}
               </p>
-              <ul>
-                <li>
-                  <i class="bi bi-check"></i> Interior design Package
-                </li>
-                <li>
-                  <i class="bi bi-check"></i> Building House
-                </li>
-                <li>
-                  <i class="bi bi-check"></i> Reparing of Residentail Roof
-                </li>
-                <li>
-                  <i class="bi bi-check"></i> Renovaion of Commercial Office
-                </li>
-                <li>
-                  <i class="bi bi-check"></i> Make Quality Products
-                </li>
-              </ul>
+
             </div>
           </div>
         </div>
         <!-- End col-->
       </div>
+
+
+      
     </div>
   </div><!-- End About Section -->
   {% endblock %}

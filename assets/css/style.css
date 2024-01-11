@@ -6,22 +6,97 @@
 * License: https://bootstrapmade.com/license/
 */
 
+:root {
+    /* --primary: #3ec1d5; */
+    /*primary1*/
+    --primary: #008080;
+    /*primary2*/
+    --primary2: #000080;
+    /*for text and accents*/
+    --secondary1: #36454F;
+    /*for highlights or calls to action*/
+    --secondary2: #87CEEB;
+    /* for buttons, icons, or other interactive elements.*/
+    --orange: #FFA500;
+}
+
+
+/*--------------------------------------------------------------
+# customized
+--------------------------------------------------------------*/
+
+.text-primary {
+    color: var(--primary)!important;
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    color: white;
+}
+
+.btn-orange:hover {
+    border: 1px solid var(--orange);
+    background-color: transparent;
+    color: white;
+}
+
+.btn-main {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-main:hover {
+    background-color: white;
+    /* border: 1px solid var(--primary); */
+    color: var(--primary);
+}
+
+.btn-main-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-main-outline:hover {
+    /* border: 1px solid white; */
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-white {
+    background-color: white;
+    /* border: 1px solid var(--primary); */
+    color: var(--primary);
+}
+
+.btn-white:hover {
+    /* border: 1px solid white; */
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid white;
+    color: white
+}
+
+.blog-img {
+    height: 15rem;
+}
+
+@media (max-width: 768px) {
+    .blog-img {
+        width: 100%;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 
-:root {
-    --primary: #3ec1d5;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html,
 body {
     height: 100%;
-}
-
-.text-primary {
-    color: var(--primary)!important;
+    font-family: 'Lato', sans-serif!important;
 }
 
 .floatleft {
@@ -64,19 +139,20 @@ img {
 
 p {
     margin: 0 0 15px;
-    color: #444;
+    color: var(--secondary1);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    /* font-family: "Raleway", sans-serif; */
     margin: 0 0 15px;
     color: #444;
     font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 h1 {
@@ -126,8 +202,7 @@ a:hover {
 
 body {
     background: #fff none repeat scroll 0 0;
-    color: #444;
-    /* font-family: "Open Sans", sans-serif; */
+    /* color: #444; */
     font-size: 14px;
     text-align: left;
     overflow-x: hidden;
@@ -136,6 +211,10 @@ body {
 
 .padding-main {
     margin-top: 150px;
+}
+
+.nav-link {
+    font-weight: bolder;
 }
 
 
@@ -163,7 +242,7 @@ body {
 }
 
 .back-to-top:hover {
-    background: #60ccdc;
+    background: var(--secondary2);
     color: #fff;
 }
 
@@ -195,6 +274,14 @@ button,
 button[type=submit] {
     -moz-appearance: none;
     box-shadow: none !important;
+    /* outline: 1px solid var(--primary); */
+}
+
+.form-control:focus {
+    border: 1px solid var(--primary);
+    /* Change '#ff0000' to your desired color */
+    outline: none;
+    /* Remove the default browser outline */
 }
 
 div#preloader {
@@ -222,6 +309,10 @@ div#preloader {
     padding: 70px 0px 80px;
 }
 
+.area-padding-3 {
+    padding: 70px 0px 20px;
+}
+
 .area-padding-2 {
     padding: 70px 0px 50px;
 }
@@ -240,7 +331,7 @@ div#preloader {
 }
 
 .section-headline h2::after {
-    border: 1px solid #333;
+    border: 1px solid var(--primary);
     bottom: -20px;
     content: "";
     left: 0;
@@ -373,6 +464,7 @@ div#preloader {
 .navbar .active:focus,
 .navbar li:hover>a {
     color: var(--primary);
+    /* border-bottom: 2px solid var(--primary); */
 }
 
 .navbar .dropdown ul {
@@ -592,7 +684,7 @@ div#preloader {
     align-items: center;
     position: absolute;
     bottom: 0;
-    top: 70px;
+    top: 10px;
     left: 50px;
     right: 50px;
 }
@@ -616,7 +708,7 @@ div#preloader {
 }
 
 #hero p {
-    width: 80%;
+    width: 100%;
     font-size: 38px;
     line-height: 1.2;
     margin: 0 auto 30px auto;
@@ -631,7 +723,7 @@ div#preloader {
 
 @media (max-width: 768px) {
     #hero p {
-        font-size: 28px;
+        font-size: 20px;
         line-height: 1.2;
     }
 }
@@ -732,7 +824,8 @@ div#preloader {
 --------------------------------------------------------------*/
 
 .about-area {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
+    background-color: #ffffff;
 }
 
 .single-well>a {
@@ -752,7 +845,8 @@ div#preloader {
 }
 
 .single-well p {
-    color: #444;
+    color: var(--secondary1);
+    ;
 }
 
 
@@ -1012,7 +1106,6 @@ div#preloader {
 --------------------------------------------------------------*/
 
 .reviews-area {
-    background: url(../img/background/reviews-bg.jpg);
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1028,7 +1121,7 @@ div#preloader {
 }
 
 .work-right-text {
-    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
 }
 
 .work-right-text h2 {
@@ -1637,7 +1730,7 @@ div#preloader {
 }
 
 .blog-text h4 a {
-    color: #444;
+    /* color: #444; */
     text-decoration: none;
 }
 
@@ -2110,7 +2203,8 @@ span.email-notes {
     margin-bottom: 5px;
 }
 
-.comment-respond input[type=text],
+
+/* .comment-respond input[type=text],
 .comment-respond input[type=email] {
     border: 1px solid #e5e5e5;
     border-radius: 0;
@@ -2118,18 +2212,20 @@ span.email-notes {
     margin-bottom: 15px;
     padding: 0 0 0 10px;
     width: 100%;
-}
+} */
 
-.comment-respond textarea#message-box {
+
+/* .comment-respond textarea#message-box {
     border: 1px solid #e5e5e5;
     border-radius: 0;
     max-width: 100%;
     padding: 10px;
     height: 130px;
     width: 100%;
-}
+} */
 
-.comment-respond input[type=submit] {
+
+/* .comment-respond input[type=submit] {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid var(--primary);
     border-radius: 20px;
@@ -2146,7 +2242,7 @@ span.email-notes {
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
     white-space: nowrap;
-}
+} */
 
 .comments-content-wrap span a {
     color: #000;
@@ -2449,9 +2545,9 @@ span.email-notes {
     .section-headline h2 {
         font-size: 30px;
     }
-    .well-middle .single-well {
+    /* .well-middle .single-well {
         margin-top: 30px;
-    }
+    } */
     .single-skill {
         margin-bottom: 40px;
     }
