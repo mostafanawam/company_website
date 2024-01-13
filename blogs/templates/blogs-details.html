@@ -35,10 +35,10 @@
 
 
   <!-- ======= Blog Page ======= -->
-  <div class="blog-page area-padding">
+  <div class="blog-page area-padding-0">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-4">
+        {% comment %} <div class="col-lg-4 col-md-4">
           <div class="page-head-blog">
             <div class="single-blog-page">
               <!-- search option start -->
@@ -158,7 +158,7 @@
                   </li>
                 </ul>
               </div>
-            </div> {% endcomment %}
+            </div
             <div class="single-blog-page">
               <div class="left-tags blog-tags">
                 <div class="popular-tag left-side-tags left-blog">
@@ -176,16 +176,16 @@
             </div>
           </div>
         </div>
-        <!-- End left sidebar -->
+        <!-- End left sidebar --> {% endcomment %}
         <!-- Start single blog -->
-        <div class="col-md-8 col-sm-8 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!-- single-blog start -->
               <article class="blog-post-wrapper">
                 <div class="post-thumbnail">
                   {% if post.image  %}
-                  <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:30rem">
+                  <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:15rem">
                 {% endif %}    
                 </div>
                 <div class="post-information">
@@ -271,7 +271,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
                           <p>Content  *</p>
                           <textarea id="message-box" name="content" class="form-control" cols="10" rows="5"></textarea>
-                          <input type="submit" value="Post Comment" class="btn btn-main-outline mt-2" />
+                          <input type="submit" value="Post Comment" class="btn btn-main-outline mt-3" />
                         </div>
                       {% else %}
                         <div class="col-lg-6 col-12 mt-2">
@@ -282,7 +282,6 @@
                           <p>Email *</p>
                           <input type="email" name="email" class="form-control"  required/>
                         </div>
-              
                         <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment mt-2">
                           <p>Content  *</p>
                           <textarea id="message-box" name="content" class="form-control" cols="10" rows="5"></textarea>

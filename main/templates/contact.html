@@ -27,14 +27,13 @@
           </div>
         </div>
       </div>
-      <div class="row ">
-        <div class="col-md-4 col-12">
+      <div class="row justify-content-around">
+        <div class="col-md-3 col-12">
           <div class="contact-icon text-center">
             <div class="single-icon">
               <i class="bi bi-phone"></i>
               <p>
-                {{company.phone}}<br>
-                {% comment %} <span>Monday-Friday (9am-5pm)</span> {% endcomment %}
+                {{company.phone}}
               </p>
             </div>
           </div>
@@ -44,8 +43,7 @@
             <div class="single-icon">
               <i class="bi bi-envelope"></i>
               <p>
-               {{company.email}}<br>
-                {% comment %} <span>Web: www.example.com</span> {% endcomment %}
+               {{company.email}}
               </p>
             </div>
           </div>
@@ -55,9 +53,10 @@
             <div class="single-icon">
               <i class="bi bi-geo-alt"></i>
               <p>
-                {% for add in address %}
+                {% comment %} {% for add in address %}
                   {{add}}<br>
-                {% endfor %}
+                {% endfor %} {% endcomment %}
+                {{company.address}}
                 {% comment %} Location: A108 Adam Street<br>
                 <span>NY 535022, USA</span> {% endcomment %}
               </p>
@@ -67,7 +66,7 @@
       </div>
       <div class="row justify-content-center">
         <!-- Start  contact -->
-        <div class="col-md-10 col-12">
+        <div class="col-lg-10 col-md-12 col-12">
           <div class="form contact-form">
             <form action="{% url 'main:contact_page' %}" method="post" role="form" >
               {% csrf_token %}

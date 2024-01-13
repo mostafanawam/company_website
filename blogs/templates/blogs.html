@@ -32,24 +32,24 @@
       </div><!-- End Blog Header -->
 
       <!-- ======= Blog Page ======= -->
-      <div class="blog-page area-padding">
+      <div class="blog-page area-padding-0">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-4 col-md-4 " style=" height: 100%;">
               <div class="page-head-blog">
                 <div class="single-blog-page">
                   <!-- search option start -->
-                  <form action="#">
+                  <form id="searchForm" action="">
                     <div class="search-option">
-                      <input type="text" placeholder="Search...">
-                      <button class="button" type="submit">
+                      <input type="text" placeholder="Search..." id="searchInput">
+                      <button class="button" type="submit" onclick="updateFormAction()">  
                         <i class="bi bi-search"></i>
                       </button>
                     </div>
                   </form>
                   <!-- search option end -->
                 </div>
-                <div class="single-blog-page">
+                {% comment %} <div class="single-blog-page">
                   <!-- recent start -->
                   <div class="left-blog">
                     <h4>recent post</h4>
@@ -105,8 +105,8 @@
                     </div>
                   </div>
                   <!-- recent end -->
-                </div>
-                <div class="single-blog-page">
+                </div> {% endcomment %}
+                 {% comment %} <div class="single-blog-page">
                   <div class="left-blog">
                     <h4>categories</h4>
                     <ul>
@@ -133,29 +133,7 @@
                       </li>
                     </ul>
                   </div>
-                </div>
-                {% comment %} <div class="single-blog-page">
-                  <div class="left-blog">
-                    <h4>archive</h4>
-                    <ul>
-                      <li>
-                        <a href="#">07 July 2016</a>
-                      </li>
-                      <li>
-                        <a href="#">29 June 2016</a>
-                      </li>
-                      <li>
-                        <a href="#">13 May 2016</a>
-                      </li>
-                      <li>
-                        <a href="#">20 March 2016</a>
-                      </li>
-                      <li>
-                        <a href="#">09 Fabruary 2016</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div> {% endcomment %}
+                </div>  {% endcomment %}
                 <div class="single-blog-page">
                   <div class="left-tags blog-tags">
                     <div class="popular-tag left-side-tags left-blog">
@@ -163,10 +141,16 @@
                       <ul>
                         {% for tag in tags %}
                           <li>
-                            <a href="#">{{tag.name}}</a>
+                            {% if request.GET.tag == tag.name%}
+                              <a href="?tag={{tag.name}}" class="active">{{tag.name}}</a>
+                            {% else %}
+                              <a href="?tag={{tag.name}}">{{tag.name}}</a>
+                            {% endif %}
                           </li>
                         {% endfor %}
-                  
+                        <li>
+                          <a href="{% url 'blogs:blogs_page' %}">clear <i class="bi bi-x"></i></a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -177,20 +161,15 @@
             <!-- Start single blog -->
             <div class="col-md-8 col-sm-8 col-xs-12">
               <div class="row">
-
-
                 {% for post in  posts %}
-                
-                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="col-md-12 col-sm-12 col-xs-12 text-right">
                   <div class="single-blog">
                     <div class="single-blog-img">
                       <a href="{% url 'blogs:blog_details' pk=post.id %}">
-
-                      {% if post.image  %}
-                          <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:30rem;">
-                      {% endif %}  
-                    </a>
-
+                        {% if post.image  %}
+                            <img src="{{post.image.url}}" alt="post_{{post.title}}" style="height:20rem;width:25rem" >
+                        {% endif %}  
+                      </a>
                     </div>
                     <div class="blog-meta">
                       <span class="comments-type">
@@ -203,55 +182,49 @@
                       </span>
                     </div>
                     <div class="blog-text">
-                        <h4 >
-                          <a href="{% url 'blogs:blog_details' pk=post.id %}" class="text-primary">
-
-                          {{post.title}}
+                      <h4 >
+                        <a href="{% url 'blogs:blog_details' pk=post.id %}" class="text-primary">
+                            {{post.title}}
                         </a>
-
-                        </h4>
+                      </h4>
                       <p>
                         {{post.content}}
                       </p>
                     </div>
-                    {% comment %} <span>
-                      <a   class="btn btn-main-outline">Read more</a>
-                    </span> {% endcomment %}
                   </div>
                   </div>
-              
                 </div>
                 {% endfor %}
 
-                <div class="col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
+                <div class=" d-flex justify-content-center">
 
-                {% if posts|length > 0 %}
-                <div class="blog-pagination">
-                  <ul class="pagination">
-                    <li class="page-item ">
-                      {% if posts.has_previous %}
-                        <a href="?page={{ posts.previous_page_number }} " style="font-size: 30px;" class="page-link text-primary"> &laquo;</a>
-                      {% else %}
-                        <span class="page-link" style="cursor: not-allowed;font-size: 30px;color:lightgray;">&laquo;</span>
-                      {% endif %}
-                    </li>
-            
-                    {% for page_num in posts.paginator.page_range %}
-                      <li class="page-item {% if posts.number == page_num %} active {% endif %}">
-                          <a href="?page={{ page_num }}" style="cursor: pointer;" class="page-link  {% if posts.number == page_num %} text-white {% else %}  {% endif %}">{{ page_num }}</a>
+                  {% if posts|length > 0 %}
+                  <div class="blog-pagination">
+                    <ul class="pagination">
+                      <li class="page-item ">
+                        {% if posts.has_previous %}
+                          <a href="?page={{ posts.previous_page_number }} " style="font-size: 30px;" class="page-link text-primary"> &laquo;</a>
+                        {% else %}
+                          <span class="page-link" style="cursor: not-allowed;font-size: 30px;color:lightgray;">&laquo;</span>
+                        {% endif %}
                       </li>
-                    {% endfor %}
-    
-                    <li class="page-item">
-                      {% if posts.has_next %}
-                        <a href="?page={{ posts.next_page_number }}" style="font-size: 30px;"  class="page-link text-primary">&raquo;</a>
-                      {% else %}
-                        <span class="page-link " style="cursor: not-allowed;font-size: 30px;color:lightgray;">&raquo;</span>
-                      {% endif %}
-                    </li>
-                  </ul>
-                </div> 
-                {% endif %}
+              
+                      {% for page_num in posts.paginator.page_range %}
+                        <li class="page-item {% if posts.number == page_num %} active {% endif %}">
+                            <a href="?page={{ page_num }}" style="cursor: pointer;" class="page-link  {% if posts.number == page_num %} text-white {% else %} text-primary {% endif %}">{{ page_num }}</a>
+                        </li>
+                      {% endfor %}
+      
+                      <li class="page-item">
+                        {% if posts.has_next %}
+                          <a href="?page={{ posts.next_page_number }}" style="font-size: 30px;"  class="page-link text-primary">&raquo;</a>
+                        {% else %}
+                          <span class="page-link " style="cursor: not-allowed;font-size: 30px;color:lightgray;">&raquo;</span>
+                        {% endif %}
+                      </li>
+                    </ul>
+                  </div> 
+                  {% endif %}
               </div>
 
             </div>
@@ -266,3 +239,12 @@
     </main><!-- End #main -->
 
     {% endblock %}
+    <script>
+      function updateFormAction() {
+        // Get the value of the search input
+        var searchValue = document.getElementById('searchInput').value;
+  
+        // Set the form action dynamically
+        document.getElementById('searchForm').action = "/blogs/?search=" + encodeURIComponent(searchValue);
+      }
+    </script>

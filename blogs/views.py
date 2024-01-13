@@ -9,7 +9,8 @@ from django.urls import reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class PostFilter(django_filters.FilterSet):
-    title = django_filters.CharFilter(field_name='title', lookup_expr='exact')
+    tag = django_filters.CharFilter(field_name='tags__name', lookup_expr='exact')
+    search=django_filters.CharFilter(field_name='title', lookup_expr='contains')
     class Meta:
         model = Post
         fields = []
@@ -19,11 +20,11 @@ def blogs_page(request):
     posts=Post.objects.all().order_by('-created_at')
     tags=Tag.objects.all()
 
-    posts_per_page = 4
+    posts_per_page = 3
 
     page= request.GET.get('page', 1)
     filter = PostFilter(request.GET,queryset=posts)
-    
+    # print(filter.qs)
     paginator = Paginator(filter.qs, posts_per_page)
 
     try:
