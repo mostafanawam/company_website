@@ -22,12 +22,12 @@
     <div class="container ">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
+          <div class="section-headline text-center animate-on-scroll">
             <h2>Contact us</h2>
           </div>
         </div>
       </div>
-      <div class="row justify-content-around">
+      {% comment %} <div class="row justify-content-around animate-on-scroll">
         <div class="col-md-3 col-12">
           <div class="contact-icon text-center">
             <div class="single-icon">
@@ -55,18 +55,53 @@
               <p>
                 {% comment %} {% for add in address %}
                   {{add}}<br>
-                {% endfor %} {% endcomment %}
+                {% endfor %} 
                 {{company.address}}
-                {% comment %} Location: A108 Adam Street<br>
-                <span>NY 535022, USA</span> {% endcomment %}
+           
               </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row justify-content-center">
+      </div> {% endcomment %}
+      <div class="row align-items-stretch no-gutters contact-wrap animate-on-scroll">
         <!-- Start  contact -->
-        <div class="col-lg-10 col-md-12 col-12">
+
+        <div class="col-md-4 bg-primary">
+          <div class="contact-info h-100">
+            <h3>Contact Information</h3>
+            <p class="mb-5">Your thoughts matter to us. Contact us for any questions or concerns.</p>
+            <ul class="list-unstyled">
+         
+              <li class="d-flex">
+                <i class="bi bi-phone fs-5 text-white"></i>
+                <h6 class="text ms-2 ">{{company.phone}}</h6>
+              </li>
+              <li class="d-flex">
+                <i class="bi bi-envelope fs-5  text-white"></i>
+                <h6 class="text ms-2 ">{{company.email}}</h6>
+              </li>
+              <li class="d-flex">
+                <i class="bi bi-geo-alt fs-5  text-white"></i>
+                <h6 class="text ms-2 ">{{company.address}}</h6>
+              </li>
+            </ul>
+
+
+           <div class="contact-icons pt-4 mt-5">
+              <ul>
+                {% for link in links %}
+                  <li>
+                    <a href="{{link.url}}" target="_blank"><i class="{{link.icon}}"></i></a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>  
+
+            
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-12 p-md-4 p-0">
           <div class="form contact-form">
             <form action="{% url 'main:contact_page' %}" method="post" role="form" >
               {% csrf_token %}
@@ -87,7 +122,7 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
               </div>
               <div class="text-center p-4">
                 <button type="submit" class="btn btn-main-outline">Send Message</button>
@@ -100,5 +135,6 @@
     </div>
   </div>
 </div><!-- End Contact Section -->
+
 
   {% endblock %}
