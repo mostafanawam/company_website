@@ -51,6 +51,10 @@
     color: var(--primary)!important;
 }
 
+.text-secondary {
+    color: var(--secondary1)!important;
+}
+
 .bg-primary {
     background-color: var(--primary)!important;
 }
@@ -124,7 +128,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Lato', sans-serif!important;
+    font-family: 'Lato', sans-serif !important;
 }
 
 .floatleft {
@@ -167,7 +171,7 @@ img {
 
 p {
     margin: 0 0 15px;
-    color: var(--secondary1);
+    color: var(--secondary1) !important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -178,7 +182,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 15px;
-    color: #444;
+    /* color: #444; */
     font-weight: 500;
     font-family: 'Montserrat', sans-serif !important;
 }
@@ -2376,11 +2380,6 @@ span.email-notes {
     display: inline-block;
 }
 
-.footer-content {
-    display: block;
-    overflow: hidden;
-}
-
 .popular-tag ul li a:hover,
 .footer-icons ul li a:hover,
 .popular-tag ul li .active {
@@ -2402,6 +2401,21 @@ span.email-notes {
     text-transform: capitalize;
     transition: all 0.4s ease 0s;
     width: 70px;
+}
+
+.clear-tag {
+    border: 1px solid #dc3545 !important;
+    color: #dc3545 !important;
+}
+
+.clear-tag:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+
+.footer-content {
+    display: block;
+    overflow: hidden;
 }
 
 .footer-area-bottom {

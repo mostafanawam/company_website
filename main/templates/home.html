@@ -10,6 +10,23 @@
 {% endblock %}
 
 
+    <!--
+Primary Colors: Teal (#008080) and Navy Blue (#000080) 
+Secondary Colors: Charcoal (#36454F) for text and accents, and Sky Blue (#87CEEB) for highlights or calls to action
+Accent Colors: Orange (#FFA500) for buttons, icons, or other interactive elements.
+
+Fonts: 
+Headings: A sans-serif font 'Montserrat' for modernity and readability. 
+Body: 'Lato' for a clean and neutral look.
+
+Use primary and secondary colors for navigation and headers.
+Backgrounds in lighter shades or white to ensure content stands out. 
+Accents for interactive elements. 
+
+-->
+
+
+
 {% block content %} 
 
   
@@ -26,7 +43,7 @@
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">UI/UX Design</h2>
-                <p class="animate__animated animate__fadeInUp">Designing Tomorrow's Experiences</p>
+                <p class="animate__animated animate__fadeInUp text-white">Designing Tomorrow's Experiences</p>
                 <a href="#about" class="btn btn-main scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
@@ -36,7 +53,7 @@
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Social Media Management</h2>
-                <p class="animate__animated animate__fadeInUp">Your Social Media Success Starts Here</p>
+                <p class="animate__animated animate__fadeInUp text-white">Your Social Media Success Starts Here</p>
                 <a href="#about" class="btn btn-main scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
@@ -46,7 +63,7 @@
             <div class="carousel-container">
               <div class="container">
                 <h2 class="animate__animated animate__fadeInDown">Seamless Telecom Solutions</h2>
-                <p class="animate__animated animate__fadeInUp">Your Gateway to Uninterrupted Connectivity</p>
+                <p class="animate__animated animate__fadeInUp text-white">Your Gateway to Uninterrupted Connectivity</p>
                 <a href="#about" class="btn btn-main scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
@@ -90,7 +107,7 @@
                 {% comment %} <a href="#">
                   <h4 class="sec-head">project Maintenance</h4>
                 </a> {% endcomment %}
-                <p class="animate-on-scroll">
+                <p class="animate-on-scroll text-secondary">
                   {% if company.about %}
                     {{company.about}}
                   {% else %}
@@ -128,8 +145,8 @@
                     <img src="/assets/services/digital.png" class="img-fluid" style="width:3rem"/>
                   </a>
                   <h4 class="text-primary">Digital Solutions</h4>
-                  <p >  
-                     We offer a diverse range of innovative services designed to elevate your digital presence and drive success in the ever-evolving digital landscape. 
+                  <p class="text-secondary">
+                    We offer a diverse range of innovative services designed to elevate your digital presence and drive success in the ever-evolving digital landscape. 
                   </p>
                 </div>
               </div>
@@ -145,7 +162,7 @@
                     <img src="/assets/services/ux-design.png" class="img-fluid" style="width:3rem"/>
                   </a>
                   <h4 class="text-primary">UI/UX</h4>
-                  <p>
+                  <p class="text-secondary">
                     Our design solutions seamlessly blend aesthetics and functionality, ensuring a captivating and intuitive digital journey for your audience.                  </p>
                 </div>
               </div>
@@ -161,7 +178,7 @@
                     <img src="/assets/services/social-media.png" class="img-fluid" style="width:3rem"/>
                   </a>
                   <h4 class="text-primary">Social Media Management </h4>
-                  <p>
+                  <p class="text-secondary">
                     From strategic content creation to engagement analytics, we'll help you build a compelling brand narrative and foster meaningful connections in the digital realm.                  </p>
                 </div>
               </div>
@@ -177,7 +194,7 @@
                     <img src="/assets/services/web-design.png" class="img-fluid" style="width:3rem"/>
                   </a>
                   <h4 class="text-primary">Design</h4>
-                  <p>
+                  <p class="text-secondary">
                     From captivating visuals to intuitive interfaces, we craft engaging designs that resonate with your audience and leave a lasting impression.
                   </p>
                 </div>

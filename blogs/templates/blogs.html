@@ -148,8 +148,9 @@
                             {% endif %}
                           </li>
                         {% endfor %}
-                        <li>
-                          <a href="{% url 'blogs:blogs_page' %}">clear <i class="bi bi-x"></i></a>
+                        <li >
+                          <a href="{% url 'blogs:blogs_page' %}" class="clear-tag" >clear <i class="bi bi-x"></i></a>
+                          {% comment %} class=" bg-white text-danger" style="border: 1px solid #dc3545;" {% endcomment %}
                         </li>
                       </ul>
                     </div>
